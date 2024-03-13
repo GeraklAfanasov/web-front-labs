@@ -22,3 +22,7 @@ footer {
     font-family: Arial;
     margin: 10px;
 }
+
+a {
+    text-decoration: none;
+}
