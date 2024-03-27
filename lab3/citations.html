@@ -58,70 +58,88 @@
                 margin-left: 50%;
             }
             .citation2 {
-                border: 3px solid green;
-                padding: 18px;
-                border-radius: 8px;
-                margin: 18px;
-                box-shadow: 11px 11px 7px gold;
-                background: linear-gradient(to right top, blue, gold, silver);
+                border: 1px solid blue;
+                padding: 30px;
+                border-radius: 20px;
+                margin: 30px;
+                box-shadow: 15px 15px 10px #0002;
+                background: linear-gradient(to right, blue, purple, pink);
+                position: relative; /* Добавляем позиционирование для абсолютно позиционированного элемента */
+                color: white; /* Изменяем цвет текста на белый */
             }
+
+            .citation-image2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1; /* Помещаем изображение под текстом */
+                opacity: 0.7; /* Устанавливаем прозрачность изображения */
+            }
+
             .text2 {
-                font-size: 25px;
-                font-weight: lighter;
+                font-size: 40px;
+                font-weight: normal;
                 text-align: left;
-                color: black;
+                margin-bottom: 20px;
             }
+
             .author2 {
-                text-align: center;
-                font-size: 32px;
-                opacity: 0.8;
-                margin-top: 35px;
-                margin-left: 55%;
-                color: black;
+                text-align: right;
+                font-size: 20px;
+                opacity: 0.9;
+                margin-top: 20px;
+                margin-right: 20px;
             }
             .citation3 {
-                border: 1.5px solid yellow;
-                padding: 13px;
-                border-radius: 13px;
-                margin: 13px;
-                box-shadow: 15px 15px 10px silver;
-                background: linear-gradient(to left top, pink, purple, lightblue);
+                border: 2px solid blue;
+                padding: 20px;
+                border-radius: 20px;
+                margin: 20px;
+                box-shadow: 20px 20px 15px #008080;
+                background: linear-gradient(to right, #FFC0CB, #800080, #ADD8E6);
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень тексту */
             }
+
             .text3 {
-                font-size: 40px;
-                font-weight: bold;
-                text-align: center;
-                color: black;
+                font-size: 48px;
+                font-weight: normal;
+                text-align: left;
+                margin-bottom: 10px;
+                color: white; /* Изменяем цвет текста на белый */
             }
+
             .author3 {
                 text-align: right;
-                font-size: 24px;
-                opacity: 0.9;
-                margin-top: 27px;
-                margin-left: 60%;
-                color: black;
+                font-size: 30px;
+                opacity: 0.8;
+                margin-top: 10px;
+                margin-right: 20px;
+                color: white; /* Изменяем цвет текста на белый */
             }
             .citation4 {
-                border: 0.8px solid blue;
-                padding: 16px;
-                border-radius: 6px;
-                margin: 16px;
-                box-shadow: 13px 13px 9px rebeccapurple;
-                background: linear-gradient(to bottom, orange, green, brown);
+                border: 2px dashed red;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px;
+                box-shadow: 10px 10px 5px black;
+                background: linear-gradient(to bottom, pink, Tan, yellow);
             }
             .text4 {
-                font-size: 27px;
-                font-weight: normal;
-                text-align: right;
-                color: black;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
             }
             .author4 {
                 text-align: center;
-                font-size: 36px;
-                opacity: 0.4;
-                margin-top: 32px;
-                margin-left: 54%;
-                color: black;
+                font-size: 40px;
+                opacity: 0.6;
+                margin-top: 40px;
+                margin-left: 50%;
+                color: white;
             }
             .citation5 {
                 border: 1.5px solid black;
@@ -129,7 +147,7 @@
                 border-radius: 10px;
                 margin: 8px;
                 box-shadow: 7px 7px 6px orangered;
-                background: linear-gradient(to right bottom, violet, indigo, gray);
+                background: linear-gradient(to left bottom, red, orange, yellow);
             }
             .text5 {
                 font-size: 32px;
@@ -151,7 +169,7 @@
                 border-radius: 15px;
                 margin: 10px;
                 box-shadow: 12px 11px 9px yellowgreen;
-                background: linear-gradient(to left bottom, red, orange, yellow);
+                background: linear-gradient(to left bottom, #FFE4C4, #CC0605, #957B8D, #A47C45, #FBCEB1);
             }
             .text6 {
                 font-size: 34px;
@@ -168,92 +186,91 @@
                 color: black;
             }
             .citation7 {
-                border: 2px solid wheat;
-                padding: 23px;
-                border-radius: 15px;
-                margin: 23px;
-                box-shadow: 14px 14px 8px blueviolet;
-                background: linear-gradient(to top, green, blue, brown);
+                border: 2px solid darkorange;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px;
+                box-shadow: 10px 10px 5px lavender;
+                background: linear-gradient(to bottom, midnightblue, royalblue, dodgerblue);
             }
             .text7 {
-                font-size: 29px;
-                font-weight: normal;
-                text-align: right;
-                color: black;
+                font-size: 24px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
             }
             .author7 {
                 text-align: center;
-                font-size: 22px;
+                font-size: 18px;
                 opacity: 0.7;
-                margin-top: 31px;
-                margin-left: 42%;
-                color: black;
+                margin-top: 15px;
+                color: white;
             }
+
             .citation8 {
-                border: 1px solid orange;
-                padding: 25px;
-                border-radius: 15px;
-                margin: 25px;
-                box-shadow: 11px 11px 8px burlywood;
-                background: linear-gradient(to right, Crimson, magenta, coral);
+                border: 2px solid darkmagenta;
+                padding: 22px;
+                border-radius: 12px;
+                margin: 22px;
+                box-shadow: 12px 12px 6px darkslategray;
+                background: linear-gradient(to right, teal, aqua, turquoise);
             }
             .text8 {
-                font-size: 27px;
-                font-weight: lighter;
+                font-size: 26px;
+                font-weight: normal;
                 text-align: left;
                 color: black;
             }
             .author8 {
                 text-align: center;
-                font-size: 24px;
+                font-size: 20px;
                 opacity: 0.5;
-                margin-top: 27px;
-                margin-left: 61%;
+                margin-top: 20px;
                 color: black;
             }
+
             .citation9 {
-                border: 1px solid pink;
-                padding: 17px;
-                border-radius: 11px;
-                margin: 17px;
-                box-shadow: 14px 14px 7px lime;
-                background: linear-gradient(to left, salmon, azure, lime);
+                border: 1px solid hotpink;
+                padding: 18px;
+                border-radius: 10px;
+                margin: 18px;
+                box-shadow: 10px 10px 5px darkviolet;
+                background: linear-gradient(to left, coral, orangered, firebrick);
             }
             .text9 {
-                font-size: 33px;
+                font-size: 30px;
                 font-weight: bold;
                 text-align: center;
-                color: black;
+                color: white;
             }
             .author9 {
                 text-align: left;
-                font-size: 25px;
+                font-size: 22px;
                 opacity: 0.6;
-                margin-top: 33px;
-                margin-left: 45%;
-                color: black;
+                margin-top: 25px;
+                color: white;
             }
+
             .citation10 {
-                border: 1.5px solid purple;
-                padding: 21px;
-                border-radius: 15px;
-                margin: 21px;
-                box-shadow: 12px 11px 7px azure;
-                background: linear-gradient(to right top, lavender, snow, khaki);
+                border: 1.5px solid indigo;
+                padding: 23px;
+                border-radius: 12px;
+                margin: 23px;
+                box-shadow: 11px 10px 6px darkslateblue;
+                background: linear-gradient(to right top, purple, darkorchid, mediumorchid);
             }
             .text10 {
-                font-size: 34px;
+                font-size: 32px;
                 font-weight: normal;
                 text-align: right;
-                color: black;
+                color: white;
             }
             .author10 {
                 text-align: center;
-                font-size: 34px;
+                font-size: 28px;
                 opacity: 0.8;
-                margin-top: 31px;
-                margin-left: 56%;
-                color: black;
+                margin-top: 25px;
+                color: white;
             }
         </style>
     </head>
@@ -285,11 +302,12 @@
             </div>
 
             <div class="citation2">
+                <img src="js2.webp" alt="Citation Image" class="citation-image">
                 <div class="text2">
-                    В своём воображении мы страдаем чаще, чем на самом деле
+                    Скупой платит дважды. Значит я буду работать на скупого!
                 </div>
                 <div class="author2">
-                    Сенока
+                    (c) Джейсон Стетхем
                 </div>
             </div>
 
@@ -304,64 +322,65 @@
 
             <div class="citation4">
                 <div class="text4">
-                    Сегодня в тени отдыхает тот, кто посадил дерево много лет назад
+                    Никогда не сдавайся, ты же не квартира
                 </div>
                 <div class="author4">
-                    Уоррен Баффет
+                    (c) Джейсон Стетхем
                 </div>
             </div>
 
             <div class="citation5">
+                <img src="js3.webp" alt="Citation Image" class="citation-image">
                 <div class="text5">
-                    Человек умирает тогда, когда перестаёт меняться, а похороны - просто формальности
+                    Задняя площадка, передаём за проезд!
                 </div>
                 <div class="author5">
-                    Генри Форд
+                    (c) Джейсон Стетхем
                 </div>
             </div>
 
             <div class="citation6">
                 <div class="text6">
-                    Мы изменяем себя в основном по одной из двух причин - вдохновение или отчаяние
+                    Конечно, можно учиться всю жизнь, но если ты такой умный, почему такой бедный?
                 </div>
                 <div class="author6">
-                    Джим Рон
+                    С.Н. Галицкий
                 </div>
             </div>
 
             <div class="citation7">
                 <div class="text7">
-                    Никто не может тебя обидеть без твоего согласия
+                    Я считаю, что смокинг может носить человек, у которого есть миллиард долларов, хотя-бы...
                 </div>
                 <div class="author7">
-                    Мэтт Хейг
+                    Олег Тинькофф
                 </div>
             </div>
 
             <div class="citation8">
                 <div class="text8">
-                    Если хочешь узнать человека, не слушай, что о нем говорят другие, послушай, что он говорит о других
+                    Люди обычно настолько счастливы, насколько решают.
                 </div>
                 <div class="author8">
-                    Вуди Аллен
+                    Авраам Линькольн
                 </div>
             </div>
 
             <div class="citation9">
                 <div class="text9">
-                    Если вы хотите чего-нибудь добиться, у вас должно хватать мужества на неудачи
+                    Ты навсегда в ответе за тех, кого приручил.
                 </div>
                 <div class="author9">
-                    Керк Дуглас
+                    Антуан де Сент-Экзюпери
                 </div>
             </div>
 
             <div class="citation10">
                 <div class="text10">
-                    Если вы хотите иметь то, что никогда не имели, вам придётся делать то, что никогда не делали
+                    Жизнь задыхается без цели.
                 </div>
                 <div class="author10">
-                    Коко Шанель
+                    Фёдор Достоевский
                 </div>
             </div>
         </main>
