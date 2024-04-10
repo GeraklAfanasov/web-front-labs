@@ -30,16 +30,21 @@ a {
 a:link {
     color: blue;
     text-decoration: none;
+    transition: 0.5s 2s;
 }
 
 a:visited {
     color: green;
     text-decoration: overline;
+    font-style: italic;
 }
 
 a:hover {
     color: red;
-    text-decoration: underline
+    background-color: blanchedalmond;
+    box-shadow: gray;
+    text-decoration: underline;
+    transition: 0.3s;
 }
 
 a:active {
