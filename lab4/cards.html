@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. Карточки</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <style>
+            .card-block {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 17px;
+                justify-content: center;
+                padding: 0px;
+            }
+            .card {
+                width: 300px;
+                height: 400px; /* Фиксированная высота для карточек */
+                border: 3px solid black;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 10px 4px 4px gray;
+                margin-bottom: 5px;
+                background-color: wheat;
+                position: relative; /* Для абсолютного позиционирования внутри карточки */
+            }
+            .card img {
+                width: 100%;
+                height: 70%;
+                display: block;
+                transition: transform 0.3s ease-in-out; /* Эффект увеличения изображения */
+            }
+            .card:hover img {
+                transform: scale(1.1); /* Увеличение изображения при наведении */
+            }
+            .card-info {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+                text-align: center;
+                background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для информации */
+                opacity: 0; /* Скрываем информацию по умолчанию */
+                transition: opacity 0.3s ease-in-out; /* Эффект появления информации */
+                overflow: auto; /* Добавляем прокрутку, если текст не вмещается */
+            }
+            .card:hover .card-info {
+                opacity: 1; /* Показываем информацию при наведении */
+            }
+            .card-title {
+                font-size: 20px;
+                margin-bottom: 4px;
+                text-align: center;
+
+            }
+            .card-desc {
+                font-size: 14px;
+                color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 4
+        </header>
+
+        <main>
+            <div class="card-block">
+                <div class="card">
+                    <img src="sl1.jpg" alt="product image">
+                    <div class="card-info">
+
+                        <div class="card-desc">
+                            Вы сможете самостоятельно писать полноценные web приложения,
+                            сайты, интернет магазины от начала и до конца с использованием
+                            знаний как backend, так и frontend. За счёт современного стека
+                            технологий, вы получите только актуальные знаний, которые
+                            пригодятся вам в работе.
+                        </div>
+                    </div>
+                    <h2 class="card-title">
+                        Fullstack разработка
+                    </h2>
+                </div>
+
+                <div class="card">
+                    <img src="sl2.png" alt="product image">
+                    <div class="card-info">
+                        <div class="card-desc">
+                            Курс для профессионалов и инноваторов. Пройдем путь от регистрации аккаунта до создания GPT-ассистента под узкую задачу при помощи умелого промптинга и дополнительных функций. ChatGPT — чатбот-лидер. В работе такие нужны. Наймите его к себе в ассистенты.
+                        </div>
+                    </div>
+                    <h2 class="card-title">
+                            ChatGPT в работе
+                    </h2>
+                </div>
+
+                <div class="card">
+                    <img src="sl3.png" alt="product image">
+                    <div class="card-info">
+                        <div class="card-desc">
+                            С этим курсом вы освоите многопоточное программирование и откроете для себя мир высокопроизводительных приложений! Курс предлагает хорошо структурированную теорию, практические задания, поддержку экспертов и доступ к сообществу.
+                        </div>
+                    </div>
+                    <h2 class="card-title">
+                            Многопоточный Python
+                    </h2>
+                </div>
+
+                <div class="card">
+                    <img src="sl4.png" alt="product image">
+                    <div class="card-info">
+                        <div class="card-desc">
+                            Идея этого курса — рассказать про математику. Но не про школьную математику, а про Математику, которой занимаются настоящие Математики. Можно сказать, что это курс мехматовской математики в изложении, пригодном даже для детей. Если все понятно и очень интересно — то вам сюда!
+                        </div>
+                    </div>
+                    <h2 class="card-title">
+                            100 уроков математики от Алексея Савватеева!
+                    </h2>
+                </div>
+
+                <div class="card">
+                    <img src="sl5.jpg" alt="product image">
+                    <div class="card-info">
+                        <div class="card-desc">
+                            Эффективные методики изучения английского языка. IPA (International Phonetic Alphabet). Фонетический курс о звуках, транскрипции и правильном произношении. Как понимать носителей английского языка и быть понятым ими.
+                        </div>
+                    </div>
+                    <h2 class="card-title">
+                            Основы произношения в английском языке: IPA, слоговое ударение.
+                    </h2>
+                </div>
+
+                <div class="card">
+                    <img src="sl6.png" alt="product image">
+                    <div class="card-info">
+                        <div class="card-desc">
+                            Научитесь обязательному навыку для опытного разработчика. Тестирование повышает качество приложений и сокращает количество багов. Имея набор тестов, можно не бояться вносить изменения - если мы что-то сломали, то тесты сразу дадут нам об этом знать. Записывайтесь на курс и получите востребованную компетенцию для JavaScript-разработчика!
+                        </div>
+                    </div>
+                    <h2 class="card-title">
+                            Тестирование JavaScript и React приложений
+                    </h2>
+                </div>
+
+                <div class="card">
+                    <img src="sl7.png" alt="product image">
+                    <div class="card-info">
+                        <div class="card-desc">
+                            Научитесь создавать удивительные сайты любой сложности на no-code платформе Webflow с нуля, без программирования.
+                        </div>
+                    </div>
+                    <h2 class="card-title">
+                            Верстка и создание сайтов в Webflow - с нуля до результата!
+                    </h2>
+                </div>
+
+                <div class="card">
+                    <img src="sl8.png" alt="product image">
+                    <div class="card-info">
+                        <div class="card-desc">
+                            Всё, что вы хотели узнать о статистических тестах, их математической подоплёке и реализацией на Python в одном курсе!
+                        </div>
+                    </div>
+                    <h2 class="card-title">
+                            Проверка гипотез и анализ данных на Python
+                    </h2>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            &copy; Александр Мартынов, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
