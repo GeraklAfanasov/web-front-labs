@@ -24,5 +24,25 @@ footer {
 }
 
 a {
+    color: green;
     text-decoration: none;
+}
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: green;
+    text-decoration: overline;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline
+}
+
+a:active {
+    color: black;
+    opacity: 0.3;
 }
