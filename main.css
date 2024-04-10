@@ -10,7 +10,14 @@ header {
     font-family: Arial;
     margin: -10px;
     padding: 10px;
+}
 
+header2 {
+    background-color: rgb(128, 0, 0);
+    color: rgb(255, 239, 213);
+    font-family: Arial;
+    margin: -10px;
+    padding: 10px;
 }
 main {
     height: 0;;
