@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. Позиционирование</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <style>
+            div {
+                width: 300px;
+                height: 70px;
+                line-height: 70px;
+                text-align: center;
+                background-color: white;
+                border: 1px dotted darkgreen;
+                margin: 15px;
+                position: static;
+            }
+            .position-relative {
+                position: relative;
+                left: 140px;
+                top: -130px;
+                z-index: -1;
+            }
+            .position-relative:hover {
+                z-index: 1;
+            }
+            .posistion-absolute {
+                position: absolute;
+                left: 50px;
+                top: 225px;
+            }
+            .posistion-absolute:hover {
+                width: 350px;
+                height: 80px;
+                background-color: wheat;
+                box-shadow: 10px 5px 5px black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 4
+        </header>
+
+        <main>
+            <div>static</div>
+            <div>static</div>
+            <div class="position-relative">relative</div>
+            <div>static</div>
+            <div>static</div>
+            <div class="posistion-absolute">absolute</div>
+            <div>static</div>
+            <div>static</div>
+            <div>static</div>
+            <div>static</div>
+        </main>
+
+        <footer>
+            &copy; Афанасов Геракл, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
 </html>

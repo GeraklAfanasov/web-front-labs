@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. Позиционирование</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <title>Комикс</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+
+            .comic-container {
+                position: relative;
+                display: inline-block;
+            }
+
+            .comic-image {
+                width: 1500px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+            .cloud {
+                position: absolute;
+                border-radius: 50%;
+                padding: 20px;
+                background-color: white;
+                color: black;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+                pointer-events: none; /* Чтобы облачка не блокировали клики */
+            }
+
+            .comic-container:hover .cloud {
+                opacity: 1;
+            }
+
+            .cloud:nth-child(1) {
+                left: 100px;
+                top: 50px;
+                font-size: 8px;
+            }
+
+            .cloud:nth-child(2) {
+                right: 550px;
+                top: 200px;
+                font-size: 10px;
+                color: white;
+            }
+
+            .cloud:nth-child(3) {
+                right: 600px;
+                top: 150px;
+                font-size: 15px;
+                color: white;
+            }
+
+            .cloud:nth-child(4) {
+                right: 650px;
+                top: 100px;
+                font-size: 20px;
+                color: white;
+            }
+
+            .cloud:nth-child(5) {
+                right: 700px;
+                top: 50px;
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="comic-container">
+            <img class="comic-image" src="i1.jpg" alt="Google Chrome Logo">
+            <div class="cloud">Облако 1</div>
+            <div class="cloud">Облако 2</div>
+            <div class="cloud">Облако 3</div>
+            <div class="cloud">Лучше в IT</div>
+        </div>
+
+        <footer>
+            &copy; Афанасов Геракл, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
