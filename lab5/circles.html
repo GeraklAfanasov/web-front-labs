@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. </title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <script>
+            function removeCircles (circle) {
+                circle.style.opacity = 0;
+                circle.style.transform = 'scale(0)';
+            }
+
+            function returnCircles () {
+                let circles = document.getElementsByClassName('circles');
+                for (let circle of circles) {
+                    circle.style.opacity = 1;
+                    circle.style.transform = 'scale(1)';
+                }
+            }
+        </script>
+
+        <style>
+            button {
+                position: fixed;
+            }
+            .circles {
+                border: 3px solid red;
+                border-radius: 50%;
+                display: grid;
+                position: absolute;
+                text-align: center;
+                width: 50px;
+                height: 50px;
+                font-size: 20pt;
+                font-weight: bold;
+                align-items: center;
+                cursor: pointer;
+                transition: opacity 0.7s ease, transform 0.7s ease;
+            }
+            #circles1 {
+                background-color: wheat;
+                top: 120px;
+                left: 140px;
+            }
+            #circles2 {
+                background-color: purple;
+                top: 230px;
+                left: 50px;
+            }
+            #circles3 {
+                background-color: black;
+                top: 55px;
+                left: 160px;
+            }
+            #circles4 {
+                background-color: green;
+                top: 150px;
+                left: 250px;
+            }
+            #circles5 {
+                background-color: blue;
+                top: 60px;
+                left: 250px;
+            }
+            #circles6 {
+                background-color: orange;
+                top: 265px;
+                left: 240px;
+            }
+            #circles7 {
+                background-color: gray;
+                top: 140px;
+                left: 400px;
+            }
+            #circles8 {
+                background-color: yellow;
+                top: 150px;
+                left: 60px;
+            }
+            #circles9 {
+                background-color: violet;
+                top: 320px;
+                left: 167px;
+            }
+            #circles10 {
+                background-color: turquoise;
+                top: 230px;
+                left: 150px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 5
+        </header>
+
+        <main>
+            <button onclick="returnCircles()">Вернуть все круги</button><br>
+
+            <div id="circles1" class="circles" onclick="removeCircles(this)">1</div>
+            <div id="circles2" class="circles" onclick="removeCircles(this)">2</div>
+            <div id="circles3" class="circles" onclick="removeCircles(this)">3</div>
+            <div id="circles4" class="circles" onclick="removeCircles(this)">4</div>
+            <div id="circles5" class="circles" onclick="removeCircles(this)">5</div>
+            <div id="circles6" class="circles" onclick="removeCircles(this)">6</div>
+            <div id="circles7" class="circles" onclick="removeCircles(this)">7</div>
+            <div id="circles8" class="circles" onclick="removeCircles(this)">8</div>
+            <div id="circles9" class="circles" onclick="removeCircles(this)">9</div>
+            <div id="circles10" class="circles" onclick="removeCircles(this)">10</div>
+        </main>
+
+        <footer>
+            &copy; Афанасов Геракл, ФБИ-22, 2 курс, 2024
+        </footer>
+
+    </body>
+
+</html>
