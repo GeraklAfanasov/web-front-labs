@@ -57,8 +57,12 @@
                 };
                 let total = 0;
                 for (const fruit in prices) {
-                    const quantity = document.getElementById(fruit).value;
+                    let quantity = document.getElementById(fruit).value;
+                    if (quantity < 0) {
+                        quantity = 0;
+                    }
                     total += (quantity ? quantity * prices[fruit] : 0);
+
                 }
                 document.getElementById('totalCost').innerText = 'Общая стоимость: ' + total + 'р.';
             }
@@ -75,7 +79,7 @@
 
     <body>
         <header>
-            НГТУ, ФБ, Лабораторная работа 5
+            НГТУ, ФБ, Лабораторная работа 5 *
             <hr>
         </header>
 
