@@ -34,8 +34,11 @@
         </style>
         <script>
             function sumShow() {
-                let a = 5154;
-                let b = 7891;
+                let inputA = document.getElementById('numberA');
+                let inputB = document.getElementById('numberB');
+
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
                 let result = a + b;
                 alert('Сумма ' + a + ' и ' + b + ' = ' + result);
             }
@@ -57,7 +60,10 @@
             НГТУ, ФБ, Лабораторная работа 4
         </header>
         <main>
-            <div class="message" onclick="sumShow()">Сколько будет 5154+7891?</div>
+            <label>Первое число: <input type="number" value="" id="numberA"></label><br>
+            <label>Второе число: <input type="number" value="" id="numberB"></label><br>
+
+            <div class="message" onclick="sumShow()">Найти сумму числел: </div>
             <div class="message" onclick="autorShow()">Узнать, кто автор страницы</div>
         </main>
 
