@@ -17,10 +17,12 @@
                 background-color: wheat;
                 display: inline-block;
                 cursor: pointer;
-                margin-bottom: 10px;
-                margin-top: 10px;
+                margin-bottom: 20px;
+                margin-top: 20px;
                 border-radius: 10px;
                 display: inline-block;
+                padding-left: 10px;
+                padding-top: 10px;
             }
 
             .header{
@@ -37,7 +39,7 @@
                 heigth: 30px;
             }
 
-            .label {
+            .first-number {
                 margin-top: 10px;
             }
 
@@ -107,8 +109,8 @@
             НГТУ, ФБ, Лабораторная работа 5
         </header>
         <main>
-            <label>Первое число: <input type="number" value="" id="numberA"></label><br>
-            <label>Второе число: <input type="number" value="" id="numberB"></label><br>
+            <label>Первое число: <input type="number" value="" id="numberA" class="first-number"></label><br>
+            <label class="first-number">Второе число: <input type="number" value="" id="numberB" class="first-number"></label><br>
 
             <div class="message" onclick="sumShow()">Найти сумму числел: </div>
             <div class="message" onclick="rasShow()">Найти разность чисел: </div>

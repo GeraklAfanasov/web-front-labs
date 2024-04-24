@@ -50,8 +50,10 @@
         </script>
 
         <style>
-            img {
-                max-width: 100%;
+            .image {
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
             }
         </style>
     </head>
@@ -67,55 +69,55 @@
                 <input type="range" min="0" max="20" value="0" onchange="blurChange()" id='blurValue'>
                 <span id="blurOutput"></span>
             </div><br>
-            <div><img src="sanya.jpg" id="blurImage"></div><br>
+            <div><img src="sanya.jpg" id="blurImage" class="image"></div><br>
 
             <div>
                 Фильтр brightness:
                 <input type="range" min="0" max="500" value="100" onchange="brightnessChange()" id="brightnessValue">
                 <span id="brightnessOutput"></span>
             </div><br>
-            <div><img src="sanya2.jpg" id="brightnessImage"></div><br>
+            <div><img src="sanya2.jpg" id="brightnessImage" class="image"></div><br>
 
             <div>
                 Фильтр contrast:
                 <input type="range" min="0" max="500" value="100" onchange="contrastChange()" id="contrastValue">
-                <span id="vlad.jpg"></span>
+                <span id="contrastOutput"></span>
             </div><br>
-            <div><img src="dgin.jpg" id="contrastImage"></div><br>
+            <div><img src="dgin.jpg" id="contrastImage" class="image"></div><br>
             <div>
                 Фильтр grayscale:
                 <input type="range" min="0" max="100" value="0" onchange="grayscaleChange()" id="grayscaleValue">
                 <span id="grayscaleOutput"></span>
             </div><br>
-            <div><img src="ya.jpg" id="grayscaleImage"></div><br>
+            <div><img src="ya.jpg" id="grayscaleImage" class="image"></div><br>
 
             <div>
                 Фильтр hueRotate:
                 <input type="range" min="0" max="360" value="0" onchange="hueRotateChange()" id="hueRotateValue">
                 <span id="hueRotateOutput"></span>
             </div><br>
-            <div><img src="vlad.jpg" id="hueRotateImage"></div><br>
+            <div><img src="vlad.jpg" id="hueRotateImage" class="image"></div><br>
 
             <div>
                 Фильтр invert:
                 <input type="range" min="0" max="100" value="0" onchange="invertChange()" id="invertValue">
                 <span id="invertOutput"></span>
             </div><br>
-            <div><img src="4pr.webp" id="invertImage"></div><br>
+            <div><img src="4pr.webp" id="invertImage" class="image"></div><br>
 
             <div>
                 Фильтр saturate:
                 <input type="range" min="0" max="500" value="100" onchange="saturateChange()" id="saturateValue">
                 <span id="saturateOutput"></span>
             </div><br>
-            <div><img src="5pr.webp" id="saturateImage"></div><br>
+            <div><img src="5pr.webp" id="saturateImage" class="image"></div><br>
 
             <div>
                 Фильтр sepia:
                 <input type="range" min="0" max="100" value="0" onchange="sepiaChange()" id="sepiaValue">
                 <span id="sepiaOutput"></span>
             </div><br>
-            <div><img src="6pr.webp" id="sepiaImage"></div><br>
+            <div><img src="6pr.webp" id="sepiaImage" class="image"></div><br>
         </main>
 
         <footer>

@@ -32,18 +32,18 @@
             #totalCost {
                 margin-top: 10px;
             }
-            /* Добавленные стили */
+
             header {
-                margin-bottom: 20px; /* Добавляем отступ снизу для header */
+                margin-bottom: 20px;
             }
             main {
-                flex: 1; /* Разрешаем main занимать оставшееся пространство */
-                display: flex; /* Используем flexbox для центрирования корзины */
-                justify-content: center; /* Центрируем по горизонтали */
-                align-items: flex-start; /* Выравниваем по верхнему краю */
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
             }
             footer {
-                margin-top: 20px; /* Добавляем отступ сверху для footer */
+                margin-top: 20px;
             }
         </style>
         <script>
@@ -84,23 +84,23 @@
                 <h2>Корзина товаров</h2>
                 <div class="item">
                     <label for="apple">Яблоки (100р/шт):</label>
-                    <input type="number" id="apple" min="0" placeholder="0">
+                    <input type="number" id="apple" min="0" placeholder="Голден">
                 </div>
                 <div class="item">
                     <label for="pears">Груши (80р/шт):</label>
-                    <input type="number" id="pears" min="0" placeholder="0">
+                    <input type="number" id="pears" min="0" placeholder="Зимние">
                 </div>
                 <div class="item">
                     <label for="orange">Апельсины (150р/шт):</label>
-                    <input type="number" id="orange" min="0" placeholder="0">
+                    <input type="number" id="orange" min="0" placeholder="Мараканские">
                 </div>
                 <div class="item">
                     <label for="watermelon">Арбуз (200р/шт):</label>
-                    <input type="number" id="watermelon" min="0" placeholder="0">
+                    <input type="number" id="watermelon" min="0" placeholder="Астраханские">
                 </div>
                 <div class="item">
                     <label for="melon">Дыни (300р/шт):</label>
-                    <input type="number" id="melon" min="0" placeholder="0">
+                    <input type="number" id="melon" min="0" placeholder="Торпеда">
                 </div>
                 <button onclick="calculateTotal()">Рассчитать</button>
                 <button onclick="clearBasket()">Очистить</button>
