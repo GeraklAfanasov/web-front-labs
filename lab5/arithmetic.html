@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. Арифметика</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+        <style>
+            .message{
+                cursor: pointer;
+                border: 3px solid darkgreen;
+                width: 280px;
+                height: 35px;
+                background-color: wheat;
+                display: inline-block;
+                cursor: pointer;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                border-radius: 10px;
+                display: inline-block;
+            }
+
+            .header{
+                cursor: pointer;
+            }
+
+            .footer{
+                cursor: pointer;
+            }
+
+        </style>
+        <script>
+            function sumShow() {
+                let a = 5154;
+                let b = 7891;
+                let result = a + b;
+                alert('Сумма ' + a + ' и ' + b + ' = ' + result);
+            }
+
+            function autorShow() {
+                let autor = 'Автор страницы: \nАфанасов Геракл Георгиевич';
+                alert(autor);
+            }
+
+            function ft_hi() {
+                let privet = 'Всем салам алейкум';
+                alert(privet);
+            }
+        </script>
+    <head>
+
+    <body>
+        <header class="header" onclick="autorShow()">
+            НГТУ, ФБ, Лабораторная работа 4
+        </header>
+        <main>
+            <div class="message" onclick="sumShow()">Сколько будет 5154+7891?</div>
+            <div class="message" onclick="autorShow()">Узнать, кто автор страницы</div>
+        </main>
+
+        <footer class="footer" ondblclick="ft_hi()">
+            &copy;Афанасов Геракл. ФБИ-22
+        </footer>
+    </body>
 </html>
