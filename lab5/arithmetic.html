@@ -31,6 +31,16 @@
                 cursor: pointer;
             }
 
+            #output{
+                border: 1px solid;
+                width: 300px;
+                heigth: 30px;
+            }
+
+            .label {
+                margin-top: 10px;
+            }
+
         </style>
         <script>
             function sumShow() {
@@ -82,6 +92,13 @@
                 let privet = 'Всем салам алейкум';
                 alert(privet);
             }
+            function changeOutput(buttonNum, backColor, textColor, borderColor) {
+                let output = document.getElementById('output');
+                output.innerHTML = 'Нажатая кнопка ' + buttonNum;
+                output.style.backgroundColor = backColor;
+                output.style.color = textColor;
+                output.style.border = '6px dotted ' + borderColor;
+            }
         </script>
     <head>
 
@@ -98,6 +115,15 @@
             <div class="message" onclick="umnShow()">Найти произведение числел: </div>
             <div class="message" onclick="delShow()">Найти деление числел: </div>
             <div class="message" onclick="autorShow()">Узнать, кто автор страницы</div>
+
+            <div>
+                <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'blue', 'red', 'green')">
+                <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'white', 'orange')">
+                <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'white', 'gold', 'violet')">
+                <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'pink', 'blue', 'black')">
+            </div>
+
+            <div id="output"></div>
         </main>
 
         <footer class="footer" ondblclick="ft_hi()">
