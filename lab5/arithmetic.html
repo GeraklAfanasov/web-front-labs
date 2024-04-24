@@ -43,6 +43,36 @@
                 alert('Сумма ' + a + ' и ' + b + ' = ' + result);
             }
 
+            function rasShow() {
+                let inputA = document.getElementById('numberA');
+                let inputB = document.getElementById('numberB');
+
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
+                let result = a - b;
+                alert('Разность ' + a + ' и ' + b + ' = ' + result);
+            }
+
+            function umnShow() {
+                let inputA = document.getElementById('numberA');
+                let inputB = document.getElementById('numberB');
+
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
+                let result = a * b;
+                alert('Произведение ' + a + ' и ' + b + ' = ' + result);
+            }
+
+            function delShow() {
+                let inputA = document.getElementById('numberA');
+                let inputB = document.getElementById('numberB');
+
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
+                let result = a / b;
+                alert('Деление ' + a + ' и ' + b + ' = ' + result);
+            }
+
             function autorShow() {
                 let autor = 'Автор страницы: \nАфанасов Геракл Георгиевич';
                 alert(autor);
@@ -64,6 +94,9 @@
             <label>Второе число: <input type="number" value="" id="numberB"></label><br>
 
             <div class="message" onclick="sumShow()">Найти сумму числел: </div>
+            <div class="message" onclick="rasShow()">Найти разность чисел: </div>
+            <div class="message" onclick="umnShow()">Найти произведение числел: </div>
+            <div class="message" onclick="delShow()">Найти деление числел: </div>
             <div class="message" onclick="autorShow()">Узнать, кто автор страницы</div>
         </main>
 
