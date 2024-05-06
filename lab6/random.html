@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. Лабораторная 6</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-48x48.ico">
+
+        <script>
+            let number;
+            let count = 0;
+            function startGame() {
+                number = Math.floor(Math.random() * 100) + 1;
+                let screens = document.getElementsByClassName('game');
+                screens[0].style.display = 'none';
+                screens[1].style.display = 'block';
+            }
+            function guess() {
+                let input = document.getElementById('user-number')
+                let userNumber = parseInt(input.value);
+                let message = document.getElementById('result');
+                if (userNumber === '' || isNaN(Number(userNumber))) {
+                    message.innerHTML = 'Не пустоту, а число из диапазона от 1 до 100!';
+                    input.value = '';
+                    return;
+                }
+                else if (userNumber < 1 || userNumber > 100) {
+                    message.innerHTML = 'Число должно быть в диапазоне от 1 до 100!';
+                    input.value = '';
+                    return;
+                }
+                count++;
+                if (userNumber < number) {
+                    message.innerHTML = 'Слишком маленькое число';
+                }
+                else if (userNumber > number) {
+                    message.innerHTML = 'Слишком большое число';
+                }
+                else {
+                    let screens = document.getElementsByClassName('game');
+                    screens[1].style.display = 'none';
+                    screens[2].style.display = 'block';
+                    document.getElementById('number').innerHTML = number;
+                    document.getElementById('try-count').innerHTML = count;
+                }
+                input.value = '';
+            }
+            function again(params) {
+                let screens = document.getElementsByClassName('game');
+                screens[2].style.display = 'none';
+                screens[1].style.display = 'block';
+                number = Math.floor(Math.random() * 100) + 1;
+                count = 0;
+                let message = document.getElementById('result');
+                message.innerHTML = '';
+                let input = document.getElementById('user-number');
+                input.value = '';
+            }
+            function showRools() {
+                let Button1 = document.getElementById('1button');
+                Button1.style.display = 'none';
+                let Button2 = document.getElementById('2button');
+                Button2.style.display = 'block';
+                let List = document.getElementById('list');
+                List.style.display = 'block';
+            }
+            function hideRools() {
+                let Button1 = document.getElementById('1button');
+                Button1.style.display = 'block';
+                let Button2 = document.getElementById('2button');
+                Button2.style.display = 'none';
+                let List = document.getElementById('list');
+                List.style.display = 'none';
+            }
+        </script>
+
+        <style>
+            .game {
+                border: 2px solid #000; /* рамка */
+                border-radius: 10px; /* скругление */
+                width: fit-content; /* ширина */
+                margin: 10px auto; /* внешние отступы */
+                padding: 20px; /* внутренние отступы */
+                text-align: center; /* выравнивание текста по центру */
+                background-color: #f0f0f0; /* фоновый цвет */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* тень для эффекта "3D" */
+                transition: all 0.3s ease; /* плавные переходы */
+            }
+
+            button {
+                cursor: pointer;
+                width: fit-content;
+                margin: auto;
+                display: grid;
+                place-items: center;
+            }
+            input {
+                width: 40%;
+                text-align: center;
+            }
+            .rools {
+                border: 2px solid #000; /* рамка */
+                border-radius: 10px; /* скругление */
+                background-color: #f0f0f0;
+                padding: 20px;
+                width: fit-content;
+                margin: auto;
+            }
+            h2 {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 6
+            <hr>
+        </header>
+
+        <main>
+            <div class="game">
+                <button onclick="startGame()">
+                    Сыграть в игру
+                </button>
+            </div>
+
+            <div class="game" style="display: none;">
+                <h1>Угадай число</h1>
+
+                <div>
+                    Задумано число от 1 до 100. Угадайте, какое?<br>
+                    <input type="number" value="" min="1" max="100" placeholder="Введите число от 1 до 100" id="user-number"><br>
+                    <button onclick="guess()">Угадать</button><br>
+                    <div id="result"></div>
+                </div>
+            </div>
+
+            <div class="game" style="display: none;">
+                <h1>Поздравляем, Вы выиграли!</h1>
+
+                <div>
+                    Задуманное число: <span id="number"></span>
+                </div>
+                <div>
+                    Количество попыток: <span id="try-count"></span>
+                </div>
+                <div>
+                    <button onclick="again()">Сыграть ещё раз</button>
+                </div>
+            </div>
+
+            <div class="rools">
+                <div id="1button" style="display: block;">
+                    <button onclick="showRools()">Показать правила игры</button>
+                </div>
+                <div id="2button" style="display: none;">
+                    <button onclick="hideRools()">Скрыть правила игры</button>
+                </div>
+                <div id="list" style="display: none;">
+                    <h2>Правила игры:</h2>
+                    <ol type="I">
+                        <li>Для начала игры "Угадай Число" нажмите кнопку "Сыграть в игру"</li>
+                        <li>Выберите число, которое задумали из диапазона от 1 до 100</li>
+                        <li>Напишите выбранное число в поле ввода</li>
+                        <li>Кнопка "Угадать" - нужна для проверки выбранного вами числа с загаданным</li>
+                        <li>Меняй съчисло следуя простой логике подсказок</li>
+                        <li>Нажмите кнопку "Сыграть ещё раз" в случае победы или желании начать игру заново</li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            &copy; Афанасов Геракл, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
