@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. Лабораторная 5</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-48x48.ico">
+
+        <style>
+
+            .changeBlock {
+                border: 2px solid #000;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                background-color: #f0f0f0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                width: fit-content;
+                position: absolute; /* Позиционирование */
+                top: 50%; /* Положение сверху */
+                left: 35%; /* Положение слева */
+                /* transform: translate(0); Центрирование */
+            }
+
+            .changeBlock:hover {
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px);
+            }
+        </style>
+
+        <script>
+            function changeColor(div) {
+                if (div.style.backgroundColor == 'rgb(255, 255, 0)') {
+                    div.style.backgroundColor = 'rgb(255, 0, 0)';
+                    div.style.color = 'rgb(0, 0, 0)';
+                    document.getElementById('color-name').innerHTML = 'красный';
+                }
+                else if (div.style.backgroundColor == 'rgb(255, 0, 0)') {
+                    div.style.backgroundColor = 'rgb(0, 0, 0)';
+                    div.style.color = 'rgb(255, 255, 255)';
+                    document.getElementById('color-name').innerHTML = 'чёрный';
+                }
+                else if (div.style.backgroundColor == 'rgb(0, 0, 0)') {
+                    div.style.backgroundColor = 'rgb(255, 165, 0)';
+                    div.style.color = 'rgb(75, 0, 130)';
+                    document.getElementById('color-name').innerHTML = 'оранжевый';
+                }
+                else if (div.style.backgroundColor == 'rgb(255, 165, 0)') {
+                    div.style.backgroundColor = 'rgb(245, 222, 179)';
+                    div.style.color = 'rgb(165, 42, 42)';
+                    document.getElementById('color-name').innerHTML = 'бежевый';
+                }
+                else {
+                    div.style.backgroundColor = 'rgb(255, 255, 0)';
+                    document.getElementById('color-name').innerHTML = 'жёлтый';
+                    div.style.color = 'rgb(128, 0, 128)';
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 5
+            <hr>
+        </header>
+
+        <main>
+            <div class="changeBlock" ondblclick="changeColor(this)">
+                Цвет: <span id="color-name">жёлтый</span><br>
+                Сделайте двойной щелчок, чтобы сменить цвет.
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            &copy; Афанасов Геракл, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
