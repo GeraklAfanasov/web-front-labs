@@ -16,15 +16,17 @@
                 border-radius: 10px;
                 padding: 20px;
                 text-align: center;
-                background-color: #f0f0f0;
+                background-color: rgb(255, 255, 0);
+                color: rgb(128, 0, 128);
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease;
+                transition: all 0.8s ease;
                 width: fit-content;
                 position: absolute; /* Позиционирование */
                 top: 50%; /* Положение сверху */
                 left: 35%; /* Положение слева */
                 /* transform: translate(0); Центрирование */
             }
+            
 
             .changeBlock:hover {
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -33,32 +35,32 @@
         </style>
 
         <script>
+            // Массив цветов и их соответствующих имен
+            var colors = [
+                { name: 'жёлтый', background: 'rgb(255, 255, 0)', text: 'rgb(128, 0, 128)' },
+                { name: 'красный', background: 'rgb(255, 0, 0)', text: 'rgb(0, 0, 0)' },
+                { name: 'чёрный', background: 'rgb(0, 0, 0)', text: 'rgb(255, 255, 255)' },
+                { name: 'оранжевый', background: 'rgb(255, 165, 0)', text: 'rgb(75, 0, 130)' },
+                { name: 'бежевый', background: 'rgb(245, 222, 179)', text: 'rgb(165, 42, 42)' }
+            ];
+
             function changeColor(div) {
-                if (div.style.backgroundColor == 'rgb(255, 255, 0)') {
-                    div.style.backgroundColor = 'rgb(255, 0, 0)';
-                    div.style.color = 'rgb(0, 0, 0)';
-                    document.getElementById('color-name').innerHTML = 'красный';
+                // Находим индекс текущего цвета в массиве
+                var currentIndex = colors.findIndex(color => color.background === div.style.backgroundColor);
+
+                // Если текущий цвет не найден, ставим жёлтый
+                if (currentIndex === -1) {
+                    currentIndex = 0;
                 }
-                else if (div.style.backgroundColor == 'rgb(255, 0, 0)') {
-                    div.style.backgroundColor = 'rgb(0, 0, 0)';
-                    div.style.color = 'rgb(255, 255, 255)';
-                    document.getElementById('color-name').innerHTML = 'чёрный';
-                }
-                else if (div.style.backgroundColor == 'rgb(0, 0, 0)') {
-                    div.style.backgroundColor = 'rgb(255, 165, 0)';
-                    div.style.color = 'rgb(75, 0, 130)';
-                    document.getElementById('color-name').innerHTML = 'оранжевый';
-                }
-                else if (div.style.backgroundColor == 'rgb(255, 165, 0)') {
-                    div.style.backgroundColor = 'rgb(245, 222, 179)';
-                    div.style.color = 'rgb(165, 42, 42)';
-                    document.getElementById('color-name').innerHTML = 'бежевый';
-                }
-                else {
-                    div.style.backgroundColor = 'rgb(255, 255, 0)';
-                    document.getElementById('color-name').innerHTML = 'жёлтый';
-                    div.style.color = 'rgb(128, 0, 128)';
-                }
+
+                // Получаем следующий цвет
+                var nextIndex = (currentIndex + 1) % colors.length;
+                var nextColor = colors[nextIndex];
+
+                // Устанавливаем новый цвет и обновляем текст
+                div.style.backgroundColor = nextColor.background;
+                div.style.color = nextColor.text;
+                document.getElementById('color-name').innerHTML = nextColor.name;
             }
         </script>
     </head>

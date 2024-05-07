@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. Лабораторная 5</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-48x48.ico">
+        <script>
+            function filter() {
+                let color = document.getElementById('wear-color').value;
+                let type = document.getElementById('wear-type').value;
+                let wear = document.getElementById('wear');
+
+                if (color == 'Красный' && type == 'Футболка') {
+                    wear.href = 'https://i.pinimg.com/736x/98/0a/f8/980af8f08fceb1ea49be0467fdfa4adb.jpg';
+                    wear.querySelector('img').src = 'https://i.pinimg.com/736x/98/0a/f8/980af8f08fceb1ea49be0467fdfa4adb.jpg';
+                }
+                else if (color == 'Красный' && type == 'Майка') {
+                    wear.href = 'https://i.pinimg.com/736x/4d/20/cf/4d20cfbf107bad8ff18d1a499c032cba.jpg';
+                    wear.querySelector('img').src = 'https://i.pinimg.com/736x/4d/20/cf/4d20cfbf107bad8ff18d1a499c032cba.jpg';
+                }
+                else if (color == 'Красный' && type == 'Поло') {
+                    wear.href = 'https://i.pinimg.com/736x/d0/dc/29/d0dc29afb22123d591426076f6084869.jpg';
+                    wear.querySelector('img').src = 'https://i.pinimg.com/736x/d0/dc/29/d0dc29afb22123d591426076f6084869.jpg';
+                }
+                else if (color == 'Белый' && type == 'Футболка') {
+                    wear.href = 'https://i.pinimg.com/736x/a9/05/e4/a905e4f4f166d266e22ec75a68418b82.jpg';
+                    wear.querySelector('img').src = 'https://i.pinimg.com/736x/a9/05/e4/a905e4f4f166d266e22ec75a68418b82.jpg';
+                }
+                else if (color == 'Белый' && type == 'Майка') {
+                    wear.href = 'https://i.pinimg.com/736x/aa/e4/bf/aae4bf26df3c6817c0277d7e4bc83ec3.jpg';
+                    wear.querySelector('img').src = 'https://i.pinimg.com/736x/aa/e4/bf/aae4bf26df3c6817c0277d7e4bc83ec3.jpg';
+                }
+                else if (color == 'Белый' && type == 'Поло') {
+                    wear.href = 'https://i.pinimg.com/736x/d4/7d/3b/d47d3bd58f21164711722f3154edb4e1.jpg';
+                    wear.querySelector('img').src = 'https://i.pinimg.com/736x/d4/7d/3b/d47d3bd58f21164711722f3154edb4e1.jpg';
+                }
+                else if (color == 'Чёрный' && type == 'Футболка') {
+                    wear.href = 'https://i.pinimg.com/736x/4e/c6/64/4ec664e69d296a9d2df46979e0a45a01.jpg';
+                    wear.querySelector('img').src = 'https://i.pinimg.com/736x/4e/c6/64/4ec664e69d296a9d2df46979e0a45a01.jpg';
+                }
+                else if (color == 'Чёрный' && type == 'Майка') {
+                    wear.href = 'https://i.pinimg.com/736x/45/a2/41/45a2414c8327562046c6617d209a2229.jpg';
+                    wear.querySelector('img').src = 'https://i.pinimg.com/736x/45/a2/41/45a2414c8327562046c6617d209a2229.jpg';
+                }
+                else if (color == 'Чёрный' && type == 'Поло') {
+                    wear.href = 'https://i.pinimg.com/736x/20/e5/5e/20e55e578dde7ceea39c49e06c64327c.jpg';
+                    wear.querySelector('img').src = 'https://i.pinimg.com/736x/20/e5/5e/20e55e578dde7ceea39c49e06c64327c.jpg';
+                } 
+            }
+        </script>
+
+        <style>
+
+            .filter {
+                border: 2px solid lightcoral;
+                border-radius: 10px; /* Изменение радиуса скругления */
+                width: fit-content;
+                height: fit-content;
+                text-align: center;
+                align-items: center;
+                padding: 25px;
+                margin: 25px auto;
+            }
+            h2 {
+                text-align: center;
+            }
+            button {
+                cursor: pointer;
+                width: fit-content;
+                margin: auto;
+                display: grid;
+                place-items: center;
+            }
+            select {
+                width: 25%;
+                text-align: center;
+            }
+            a {
+                display: block; /* Чтобы кнопка была ровной */
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
+                border: 2px solid lightcoral;
+                border-radius: 10px; /* Скругление углов рамки */
+                overflow: hidden; /* Обрезаем всё, что выходит за рамку */
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 6
+        </header>
+        
+        <main>
+            <div class="filter">
+                <h2>Фильтр для одежды</h2>
+                Цвет одежды:
+                <select id="wear-color">
+                    <option>Красный</option>
+                    <option>Белый</option>
+                    <option>Чёрный</option>
+                </select><br>
+                
+                Тип одежды:
+                <select id="wear-type">
+                    <option>Футболка</option>
+                    <option>Поло</option>
+                    <option>Майка</option>
+                </select><br>
+
+                <button onclick="filter()">Применить</button><br>
+                <a id="wear" href="https://i.pinimg.com/736x/98/0a/f8/980af8f08fceb1ea49be0467fdfa4adb.jpg" target="_blank">
+                    <img src="https://i.pinimg.com/736x/98/0a/f8/980af8f08fceb1ea49be0467fdfa4adb.jpg" alt="Одежда">
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            &copy; Афанасов Геракл, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
