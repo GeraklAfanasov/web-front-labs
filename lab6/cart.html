@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Афанасов Геракл Георгиевич. Лабораторная 5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-48x48.ico">
+    <script>
+        let inputs = ['quantityA', 'quantityB', 'quantityC', 'quantityD', 'quantityE', 'quantityF', 'quantityG'];
+        let prices = [100, 50, 50, 70, 50, 300, 400];
+
+        function totalScore() {
+            let inputBalance = document.getElementById('balance');
+            let bank = Math.max(parseInt(inputBalance.value) || 0, 0);
+
+            let quantities = inputs.map(id => parseInt(document.getElementById(id).value) || 0);
+
+            let itog = quantities.reduce((total, quantity, index) => total + quantity * prices[index], 0);
+            return itog; // Сохраняем результат в переменную
+        }
+
+        function showTotal() {
+            let itog = totalScore(); // Получаем результат из функции totalScore
+            document.getElementById('output').innerHTML = 'Итого: ' + itog + ' рублей'; // Выводим результат
+            let message = document.getElementById('result');
+
+            // Остальная логика проверки и вывода сообщений
+            let inputBalance = document.getElementById('balance');
+            let bank = Math.max(parseInt(inputBalance.value) || 0, 0);
+            let quantities = inputs.map(id => parseInt(document.getElementById(id).value) || 0);
+
+            if (bank === '' || isNaN(Number(bank))) {
+                message.innerHTML = 'Введите остаток средств на балансе!';
+            } else if (bank < itog) {
+                message.innerHTML = 'У вас недостаточно средств на балансе!';
+            } else if (quantities.some(quantity => quantity < 0)) {
+                message.innerHTML = 'Количество товара не может быть отрицательным!';
+            } else if (quantities.every(quantity => quantity === 0)) {
+                message.innerHTML = 'Нужно выбрать хотя бы один товар!';
+            } else {
+                message.innerHTML = 'Товар успешно оформлен!';
+            }
+        }
+    </script>
+    <style>
+        .cartProd {
+            border: 4px solid lightcoral;
+            border-radius: 10px;
+            width: fit-content;
+            height: fit-content;
+            text-align: center;
+            align-items: center;
+            padding: 20px;
+            margin: 100px;
+            line-height: 1.6;
+            margin-left: 420px;
+        }
+        button {
+            cursor: pointer;
+            width: fit-content;
+            place-items: center;
+        }
+        input {
+            width: 200px;
+        }
+        table {
+            border: 3px solid darkred;
+            border-collapse: collapse;
+            width: fit-content;
+            height: fit-content;
+            align-items: center;
+        }
+        td, th {
+            border: 1.5px solid darkred;
+            padding: 5px;
+        }
+        h2 {
+            line-height: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+
+    <main>
+        <div class="cartProd">
+            <div>
+                <label>Мой баланс: <input type="number" placeholder="Введите количество средств" min="0" id="balance" oninput="totalScore()"></label>
+            </div>
+
+            <div>
+                <h2>Корзина товаров</h2>
+                <table>
+                    <tr>
+                        <th>№</th>
+                        <th>Название</th>
+                        <th>Единица</th>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Cок</td>
+                        <td>Литр</td>
+                        <td>100 р</td>
+                        <td><input type="number" placeholder="Введите количество товара" min="0" id="quantityA" oninput="totalScore()"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Сникерс</td>
+                        <td>Шт</td>
+                        <td>50 р</td>
+                        <td><input type="number" placeholder="Введите количество товара" min="0" id="quantityB" oninput="totalScore()"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Сахар-песок</td>
+                        <td>Кг</td>
+                        <td>50 р</td>
+                        <td><input type="number" placeholder="Введите количество товара" min="0" id="quantityC" oninput="totalScore()"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Картофель</td>
+                        <td>Кг</td>
+                        <td>70 р</td>
+                        <td><input type="number" placeholder="Введите количество товара" min="0" id="quantityD" oninput="totalScore()"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Вода</td>
+                        <td>Литр</td>
+                        <td>50 р</td>
+                        <td><input type="number" placeholder="Введите количество товара" min="0" id="quantityE" oninput="totalScore()"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Томаты</td>
+                        <td>Кг</td>
+                        <td>300 р</td>
+                        <td><input type="number" placeholder="Введите количество товара" min="0" id="quantityF" oninput="totalScore()"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Карбонат</td>
+                        <td>Кг</td>
+                        <td>400 р</td>
+                        <td><input type="number" placeholder="Введите количество товара" min="0" id="quantityG" oninput="totalScore()"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <button onclick="showTotal()">ОК</button><br>
+            <div id="output"></div>
+            <div id="result"></div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Афанасов Геракл, ФБИ-22, 2 курс, 2024
+    </footer>
+</body>
+</html>
