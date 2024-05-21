@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. Добавление блоков</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-48x48.ico">
+
+        <script>
+            function addNewBlock() {
+                let newBlock = document.createElement('div');
+                newBlock.style.backgroundColor = 'green';
+                newBlock.style.height = '50px';
+                newBlock.style.border = '3px dashed blue';
+                newBlock.style.width = '370px';
+                newBlock.style.margin = '10px 0';
+
+                document.querySelector('main').appendChild(newBlock);
+            }
+
+        </script>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 7
+        </header>
+        
+        <main>
+            <button onclick="addNewBlock()">Добавить блок</button><br>
+        </main>
+        
+        <footer>
+            &copy; Афанасов Геракл, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
