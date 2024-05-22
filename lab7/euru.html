@@ -36,10 +36,10 @@
                         outputDiv.innerHTML = `
                             <div class="info-box">
                                 <h2>Курс евро</h2>
-                                <div>Текущий курс: ${euroRate.toFixed(2)} рублей за 1 евро</div>
+                                <div>Текущий курс: ${euroRate.toFixed(2)}</div>
                                 <div>Дата запроса: ${new Date(previousDate).toLocaleDateString()}</div>
                                 <div>Курс за прошлую дату: ${previousRate.toFixed(2)}</div>
-                                <div>Разница между текущим и прошлым курсом составила: ${difference.toFixed(2)}</div>
+                                <div>Разница между курсами: ${difference.toFixed(2)}</div>
                                 <div>${trendMessage}</div>
                             </div>
                         `;
