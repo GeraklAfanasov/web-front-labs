@@ -97,10 +97,46 @@
                     main.appendChild(newBlock);
                 }
             }
+
+            function coloredCircles() {
+                let inputCircles = document.getElementById('Circles');
+                let inCr = parseInt(inputCircles.value) || 0;
+
+                let main = document.querySelector('main');
+                for(let i = inCr; i>0; i--) {    
+                    let newBlock = document.createElement('div');
+                    newBlock.style.height = '50px';
+                    newBlock.style.border = '3px dashed white';
+                    newBlock.style.borderRadius = '50%';
+                    newBlock.style.width = '50px';
+                    newBlock.style.margin = '10px 4px';
+                    newBlock.style.display = 'inline-block';
+                    newBlock.style.justifyContent = 'center';
+                    newBlock.style.alignItems = 'center';
+                    newBlock.style.textAlign = 'center';
+                    newBlock.style.fontSize = '20pt';
+                    newBlock.style.lineHeight = '50px';
+
+                    if (i % 2 === 0) {
+                        newBlock.style.backgroundColor = 'black';
+                    } else {
+                        newBlock.style.backgroundColor = 'yellow';
+                    }
+
+                    newBlock.innerHTML = `${i}`
+
+                    main.appendChild(newBlock);
+                }
+            }
         </script>
 
         <style>
-            
+            input {
+                width: 210px;
+            }
+            button {
+                font-weight: lighter;
+            }
         </style>
     </head>
 
@@ -116,6 +152,8 @@
             <button onclick="add20_50()">20 => 50</button>
             <button onclick="addMns80_Pl10()">10 => -80</button><br>
             <button onclick="opacityBlocks()">Полупрозрачные блоки</button><br>
+            <input type="number" placeholder="Введите количество кругов" min="0" id="Circles">
+            <button onclick="coloredCircles()">Цветные круги</button><br>
         </main>
         
         <footer>
