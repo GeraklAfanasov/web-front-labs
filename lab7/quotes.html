@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Афанасов Геракл Георгиевич. Котировки акций компании Лента</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon-32x32.png">
+        <link rel="icon" href="../favicon-48x48.ico">
+
+        <script>
+            function showCourse() {
+                const prices = [
+                    1231.50, 1213.00, 1223.00, 1200.50, 1192.50,
+                    1184.00, 1229.50, 1204.50, 1179.50, 1143.00
+                ];
+                const dates = [
+                    '07.05.2024', '08.05.2024', '10.05.2024', '13.05.2024', '14.05.2024',
+                    '15.05.2024', '16.05.2024', '17.05.2024', '20.05.2024', '21.05.2024'
+                ];
+
+                let table = document.getElementById('lenta-table');
+                let maxPrice = prices[0];
+                let minPrice = prices[0];
+                for(let i = 0; i < prices.length; i++) {
+                    let tr = document.createElement('tr'); 
+                    let tdPrice = document.createElement('td');
+                    let tdDate = document.createElement('td');
+                    let tdDiff = document.createElement('td');
+                    tdDate.innerText = dates[i];
+                    tdPrice.innerText = prices[i];
+
+                    if (i > 0) {
+                        let diff = prices[i] - prices[i - 1];
+                        tdDiff.innerText = diff.toFixed(1);
+                    } else {
+                        tdDiff.innerText = '-';
+                    }
+
+                    tr.appendChild(tdDate);
+                    tr.appendChild(tdPrice);
+                    tr.appendChild(tdDiff);
+                    table.appendChild(tr);
+
+                    if (prices[i] > maxPrice) {
+                        maxPrice = prices[i];
+                    }
+                    if (prices[i] < minPrice) {
+                        minPrice = prices[i];
+                    }
+                }
+                
+                let sum = 0;
+                for(let i = 0; i < prices.length; i++) {
+                    sum += prices[i]; 
+                }
+                let average = (sum / prices.length).toFixed('1');
+
+                let averageRes = document.getElementById('average');
+                averageRes.innerHTML = `Среднее значение: ${average}`;
+
+                let minRes = document.getElementById('min');
+                minRes.innerHTML = `Минимальное значение: ${minPrice.toFixed(1)}`;
+
+                let maxRes = document.getElementById('max');
+                maxRes.innerHTML = `Максимальное значение: ${maxPrice.toFixed(1)}`;                
+            }
+        </script>
+
+        <style>
+            table {
+                border-collapse: collapse;
+                width: fit-content;
+                height: fit-content;
+                text-align: center;
+                align-items: center;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 7
+        </header>
+        
+        <main>
+            <button onclick="showCourse()">Курс акций Лента</button>
+            <table border="2" id="lenta-table"></table>
+            <div id="average"></div>
+            <div id="min"></div>
+            <div id="max"></div>
+        </main>
+        
+        <footer>
+            &copy; Афанасов Геракл, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
