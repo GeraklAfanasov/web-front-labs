@@ -32,6 +32,18 @@
                 color: black;
                 border: 3px solid rgb(224, 26, 26);
             }
+            #arrow {
+                width: 25%;
+                height: 6px;
+                left: 25%;
+                background: rgb(78, 5, 5);
+                z-index: 2;
+                position: absolute;
+                top: 50%;
+                transform-origin: 100%;
+                transform: rotate(90deg);
+                transition: transform 0.5s ease-in-out;
+            }
         </style>
     </head>
 
@@ -44,6 +56,7 @@
 
         <main>
             <div id="seconds"></div>
+            <div id="arrow"></div>
         </main>
 
         <footer>
