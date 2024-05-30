@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>РостФинанс Банк</title>
+        <link rel="stylesheet" href="mainRGZ.css">
+        <link rel="icon" href="rost.ico">
+
+        <style>
+           main {
+                margin-right: 10px;
+                margin-left: 170px;
+            }
+            h1 {
+                color: #01101e;
+                text-align: center;
+                font-weight: 600;
+                font-size: 36px;
+            }
+            .all {
+                background-color: #f2f4f7;
+                padding: 20px;
+                padding-top: 2px;
+                border-radius: 8px;
+                box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.1);
+                color: black;
+                font-size: 20px;
+                margin-right: 120px;
+                margin-left: 120px;
+                line-height: 1.5;
+            }
+            .butNew {
+                font-size: 14px;
+                width: 150px;
+                text-align: center;
+                margin: 10px;
+                border: 2px solid  #00c09f;
+                background-color: #e8e8e8;
+                color: #00c09f; /* Цвет текста */
+                padding: 10px 10px; /* Внутренние отступы */
+                border-radius: 15px; /* Скругление углов */
+                text-decoration: none; /* Удаление подчеркивания */
+                transition: background-color 0.3s ease; /* Плавное изменение фона */
+            }
+            .butNew:hover {
+                background-color: #00c09f; /* Цвет при наведении */
+                color: #fff;
+                transform:scale(1.05) ;
+            }
+            .news {
+                margin: auto;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                padding: 10px;
+                padding-left: 40px;
+                padding-right: 30px;
+                width: 800px;
+                background: #e8e8e8;
+                overflow: hidden;
+                text-align: justify;
+                font: 16px 'Source Sans Pro', Tahoma, sans-serif;
+                border-radius: 8px;
+            }
+            .date {
+                color: #202020;
+                font-size: 13px;
+                margin-bottom: 0px;
+                margin-top: 5px;
+            }
+            .title a {
+                margin: 7px;
+                margin-left: 0;
+                font-weight: lighter;
+                text-decoration: none;
+                cursor: pointer;
+                color: #000000;
+                font-weight: 600;
+            }
+            .all h1 {
+                color: #01101e;
+                text-align: center;
+                font-weight: 600;
+                font-size: 46px;
+            }
+            .title a:hover {
+                text-decoration: underline;
+            }
+            .news p {
+                line-height: 1.5;
+                text-indent: 1.25cm;
+            }
+            #display {
+                color: #888;
+            }
+            .bold {
+                font-weight: bold;
+            }
+        </style>
+
+        <script>
+            function showNew(i) {
+                let screens = document.getElementsByClassName('c' + i);
+                screens[0].style.display = 'none';
+                screens[1].style.display = 'block';
+                screens[2].style.display = 'none';
+                screens[3].style.display = 'block';
+
+            }
+            function hideNew(i) {
+                let screens = document.getElementsByClassName('c' + i)
+                screens[0].style.display = 'block';
+                screens[1].style.display = 'none';
+                screens[2].style.display = 'block';
+                screens[3].style.display = 'none';
+            }
+        </script>
+    </head>
+
+    <body>
+        <header> 
+            <div class="container">
+                <div class="header__logo">
+                    <img alt="Контактная информация" src="logo.webp" srcset="logo.webp 2x, logo.webp 3x" class="header__logo-img">
+                </div>
+
+                <div class="wide-menu-flex wide-menu-online">
+                    <a href="https://www.rostfinance.ru/internet-bank/" class="btn empty-border-green online-bank">Онлайн-банк</a>
+                </div>
+                <div class="header-menu-items">
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/blog/">Блог</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/about/">О банке</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/mobile-app/">Мобильное приложение</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/faq/">Вопросы и ответы</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/currency/">Курсы валют</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/contacts/">Контакты</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" rel="modal:open" href="https://www.rostfinance.ru/#help_form">Помощь</a>
+                </div> 
+            </div>
+        </header>
+
+        <main>
+            <div class="menu">
+                <h3>Меню</h3>
+                <ul>
+                    <li><a href="company.html">О компании</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="calculator.html">Курс валют</a></li>
+                    <li><a href="contacts.html">Контактные данные</a></li>
+                    <li><a href="video.html">Видео</a></li>
+                </ul>
+            </div>
+
+            <div class="all">
+                <h1>Новости банка РостФинанс</h1>
+                <div class="news">
+                    <div class="date">30.05.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/bank-zapustil-pilotnyy-proekt-po-podpisaniyu-kreditno-obespechitelnoy-dokumentatsii-s-fizicheskimi-l/">
+                            ЗАПУЩЕНА УСЛУГА ПОДПИСАНИЯ ФИЗИЧЕСКИМИ ЛИЦАМИ КРЕДИТНО-ОБЕСПЕЧИТЕЛЬНОЙ ДОКУМЕНТАЦИИ УСИЛЕННОЙ КВАЛИФИЦИРОВАННОЙ ЭЛЕКТРОННОЙ ПОДПИСЬЮ
+                        </a>
+                    </h3>
+                    <div class="c1" id="display">
+                        Уважаемые клиенты!  Рады вам сообщить, о том, что в банке запущен пилотный проект по подписанию с физическими лицами...
+                    </div>
+                    <div style="display: none;" class="c1">
+                        <p>
+                            Уважаемые клиенты!
+                        </p>
+                        <p>
+                            Рады вам сообщить, о том, что в банке запущен пилотный проект по подписанию с физическими лицами кредитно-обеспечительной документации под залог недвижимости усиленной квалифицированной электронной подписью (УКЭП).
+                        </p>
+                        <p>
+                            Для возможности подписания кредитно-обеспечительной документации усиленной квалифицированной электронной подписью (УКЭП) необходимо обратиться в отделение ООО КБ «РостФинанс» для получения УКЭП для очной идентификации, при себе достаточно иметь паспорт РФ. Менеджер по работе с клиентами проверит документ, удостоверяющий личность, сфотографирует заявителя и поможет выпустить УКЭП. После получения УКЭП клиент может провести сделку полностью дистанционно.
+                        </p>
+                        <p>
+                            С развитием технологий, в том числе в финансовом секторе, и появлением возможности дистанционного оформления сделок, многие жители России стали подписывать документы в электронном виде. Например, с помощью такой подписи можно заключать ипотечные договоры, регистрировать бизнес и недвижимость и совершать другие операции.
+                        </p>
+                        <p>
+                            Данный сервис сделан для упрощения и повышения доступности банковских услуг для наших клиентов.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c1" id="but">
+                        <button class="butNew" onclick="showNew(1)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c1" id="but">
+                        <button class="butNew" onclick="hideNew(1)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">27.05.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/zapusk-novogo-vklada-letniy-rost-s-28-05-2024/">
+                            ЗАПУСК НОВОГО ВКЛАДА «ЛЕТНИЙ РОСТ» С 28.05.2024
+                        </a>
+                    </h3>
+                    <div class="c2" id="display">
+                        Уважаемые клиенты! ООО КБ «РостФинанс» сообщает Вам информацию о запуске нового вклада «Летний Рост»...
+                    </div>
+                    <div style="display: none;" class="c2">
+                        <p>
+                            Уважаемые клиенты!
+                        </p>
+                        <p>
+                            ООО КБ «РостФинанс» сообщает Вам информацию о запуске нового вклада «Летний Рост» с 28.05.2024.
+                        </p>
+                        <p>
+                            Подробная информация на сайте Банка в разделе «Вклады и Счета», а также в офисах Банка и по телефону 8 800 777 70 01.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c2" id="but">
+                        <button class="butNew" onclick="showNew(2)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c2" id="but">
+                        <button class="butNew" onclick="hideNew(2)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">24.05.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/uvedomlenie-dlya-klientov-o-zakrytii-filiala-ooo-kb-rostfinans-v-blagoveshchenske/">
+                            УВЕДОМЛЕНИЕ ДЛЯ КЛИЕНТОВ О ЗАКРЫТИИ ФИЛИАЛА ООО КБ «РОСТФИНАНС» В БЛАГОВЕЩЕНСКЕ
+                        </a>
+                    </h3>
+                    <div class="c3" id="display">
+                        Уважаемые клиенты! Общество с ограниченной ответственностью коммерческий банк «РостФинанс» (ООО КБ «РостФинанс»), Лицензия ЦБ РФ №481 от 26.09.2022 г. сообщает о том, что Внеочередным общим собранием участников ООО КБ «РостФинанс» (протокол №5 от 28.03.2024) принято решение о закрытии Филиала Общества с ограниченной ответственностью коммерческого банка «РостФинанс»...
+                    </div>
+                    <div style="display: none;" class="c3">
+                        <p>
+                            Уважаемые клиенты!
+                        </p>
+                        <p>
+                            Общество с ограниченной ответственностью коммерческий банк «РостФинанс» (ООО КБ «РостФинанс»), Лицензия ЦБ РФ №481 от 26.09.2022 г. сообщает о том, что Внеочередным общим собранием участников ООО КБ «РостФинанс» (протокол №5 от 28.03.2024) принято решение о закрытии Филиала Общества с ограниченной ответственностью коммерческого банка «РостФинанс» в Благовещенске, расположенного по адресу: 675004, Амурская область, г. Благовещенск, ул. Пионерская, д. 2, пом. №№20011, 20030 (сокращённое наименование: Филиал ООО КБ «РостФинанс» в Благовещенске).
+                        </p>
+                        <p>
+                            В связи с закрытием Филиала ООО КБ «РостФинанс» в Благовещенске уведомляем о следующем:
+                        </p>
+                        <p>
+                            1. ООО КБ «РостФинанс» несёт все обязательства перед клиентами закрываемого филиала в полном объёме.
+                        </p>
+                        <p>
+                            2. Денежные средства на счетах клиентов передаются в составе активов и пассивов закрываемого филиала на баланс головного офиса Банка, что сопровождается изменением реквизитов счетов клиентов. Остатки средств со счетов закрываемого филиала перечисляются на к/с ООО КБ «РостФинанс» №30101810760150000052 в Отделение по Ростовской области Южного главного управления ЦБ РФ.
+                        </p>
+                        <p>
+                            С 24.05.2024 г. клиенты закрываемого филиала переводятся на обслуживание в Дополнительный офис «Центральный» Общества с ограниченной ответственностью коммерческого банка «РостФинанс» в г. Ростове-на-Дону, расположенный по адресу: 344002, г. Ростов-на-Дону. ул. Красноармейская. зд. 170, стр. 3, пом. №№41-45, тел. 88007777001. 
+                        </p>
+                        <p>
+                            Информацию по вопросам обслуживания Клиентов закрываемого филиала можно получить по тел. 8-800-777-70-01. 
+                        </p>
+                        <p>
+                            ООО КБ «РостФинанс» подтверждает действительность всех ранее заключенных в Филиале ООО КБ «РостФинанс» в Благовещенске договоров и гарантирует их исполнение, сохранение системы расчётов, оперативности и качества обслуживания. Благодарим вас за сотрудничество и надеемся на дальнейшее развитие партнёрских отношений.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c3" id="but">
+                        <button class="butNew" onclick="showNew(3)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c3" id="but">
+                        <button class="butNew" onclick="hideNew(3)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">17.05.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/bank-rossii-priglashaet-biznesmenov-yuga-i-severnogo-kavkaza-na-nedelyu-finansovoy-gramotnosti/">
+                            БАНК РОССИИ ПРИГЛАШАЕТ БИЗНЕСМЕНОВ ЮГА И СЕВЕРНОГО КАВКАЗА НА «НЕДЕЛЮ ФИНАНСОВОЙ ГРАМОТНОСТИ»
+                        </a>
+                    </h3>
+                    <div class="c4" id="display">
+                        Уважаемые клиенты! Южное ГУ Банка России проводит «Неделю финансовой грамотности» для субъектов малого и среднего предпринимательства Южного и Северо­‑Кавказского федеральных округов...
+                    </div>
+                    <div style="display: none;" class="c4">
+                        <p>
+                            <b>Уважаемые клиенты!</b>
+                        </p>
+                        <p>
+                            Южное ГУ Банка России проводит «Неделю финансовой грамотности» для субъектов малого и среднего предпринимательства Южного и Северо­‑Кавказского федеральных округов. Бесплатные открытые вебинары пройдут с 20 по 22 мая 2024 года.
+                        </p>
+                        <p>
+                            <b>Участники узнают:</b>
+                        </p>
+                        <p>
+                            как привлечь финансирование с помощью инвестплатформ, и что такое акционерный краудфандинг,
+                        </p>
+                        <p>
+                            как и когда применять факторинг и как выбрать факторинговую схему,
+                        </p>
+                        <p>
+                            как бизнес может сэкономить на безналичных операциях с помощью СБП.   
+                        </p>
+                        <p>
+                            Спикеры: эксперты Банка России, Ассоциации операторов инвестиционных платформ, Национальной системы платежных карт, представители инвестиционных платформ, кредитных организаций. Также успешным опытом поделятся предприниматели, использующие современные финансовые инструменты в бизнесе.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c4" id="but">
+                        <button class="butNew" onclick="showNew(4)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c4" id="but">
+                        <button class="butNew" onclick="hideNew(4)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">06.05.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/o-provedenii-aktsii-monetnaya-nedelya-/">
+                            О ПРОВЕДЕНИИ АКЦИИ «МОНЕТНАЯ НЕДЕЛЯ»
+                        </a>
+                    </h3>
+                    <div class="c5" id="display">
+                        Уважаемые клиенты! С 20 мая по 2 июня 2024 ООО КБ «РостФинанс» участвует в акции «Монетная неделя»....
+                    </div>
+                    <div style="display: none;" class="c5">
+                        <p><b>Уважаемые клиенты!</b></p>
+                        <p>С 20 мая по 2 июня 2024 ООО КБ «РостФинанс» участвует в акции «Монетная неделя».</p>
+                        <p>Во время акции вы можете обменять российские монеты (в том числе мелочь) на банкноты и монеты Банка России без комиссии!</p>
+                        <p>Ограничений по сумме или количеству монет нет.</p>
+                        <p>Чтобы сократить время обслуживания, рекомендуем перед походом в банк разобрать монеты по номиналам.</p>
+                    </div>
+                    <div style="display: block;" class="c5" id="but">
+                        <button class="butNew" onclick="showNew(5)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c5" id="but">
+                        <button class="butNew" onclick="hideNew(5)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">27.04.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/oformite-polucheniya-pensii-na-kartu-ooo-kb-rostfinans-i-poluchite-1000-rubley/">
+                            ОФОРМИТЕ ПОЛУЧЕНИЯ ПЕНСИИ НА КАРТУ ООО КБ «РОСТФИНАНС» И ПОЛУЧИТЕ 1000 РУБЛЕЙ!
+                        </a>
+                    </h3>
+                    <div class="c6" id="display">
+                        Уважаемые клиенты! ООО КБ «РостФинанс» продлевает сроки стимулирующего мероприятия «Пенсия +», для участия Вам необходимо оформить получение пенсии на карту ООО КБ «РостФинанс»...
+                    </div>
+                    <div style="display: none;" class="c6">
+                        <p>
+                            <b>Уважаемые клиенты!</b>
+                        </p>
+                        <p>
+                            ООО КБ «РостФинанс» продлевает сроки стимулирующего мероприятия «Пенсия +», для участия Вам необходимо оформить получение пенсии на карту ООО КБ «РостФинанс» и получить первое пенсионное зачисление в срок до 30.06.2024 включительно. На следующий месяц после перечисления первой пенсионной выплаты Вы получите 1000 рублей!  
+                        </p>
+                        <p>
+                            Подробнее об организаторе мероприятия, офисах банка в которых оно проводится, перечне Отделений Социального фонда России в которых может быть оформлено заявление о переводе пенсионных выплат, количестве призов, сроках, месте и порядке их получения, а также других правилах проведения мероприятия можно ознакомиться на сайте.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c6" id="but">
+                        <button class="butNew" onclick="showNew(6)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c6" id="but">
+                        <button class="butNew" onclick="hideNew(6)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">27.04.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/zapusk-servisa-otkrytiya-vkladov-v-prilozhenii-banka/">
+                            ЗАПУСК СЕРВИСА ОТКРЫТИЯ ВКЛАДОВ В ПРИЛОЖЕНИИ БАНКА
+                        </a>
+                    </h3>
+                    <div class="c7" id="display">
+                        Дорогие клиенты! Информируем Вас о возобновлении работы Сервиса открытия вкладов «Уверенный Рост», «Классический Рост» и «Стратегия Роста» в мобильном приложении...
+                    </div>
+                    <div style="display: none;" class="c7">
+                        <p>
+                            Дорогие клиенты!  
+                        </p>
+                        <p>Информируем Вас о возобновлении работы Сервиса открытия вкладов «Уверенный Рост», «Классический Рост» и «Стратегия Роста» в мобильном приложении Банка.</p>
+                        <p>Подробная инструкция «Как открыть вклад в приложении» в разделе Мобильное приложение в Ответах на частые вопросы</p>
+                    </div>
+                    <div style="display: block;" class="c7" id="but">
+                        <button class="butNew" onclick="showNew(7)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c7" id="but">
+                        <button class="butNew" onclick="hideNew(7)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">27.04.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/rezhim-raboty-ofisov-i-kontakt-tsentra-banka-v-period-s-27-04-2024-po-12-05-2024/">
+                            РЕЖИМ РАБОТЫ ОФИСОВ И КОНТАКТ-ЦЕНТРА БАНКА В ПЕРИОД С 27.04.2024 ПО 12.05.2024
+                        </a>
+                    </h3>
+                    <div class="c8" id="display">
+                        Дорогие клиенты, ООО КБ «РостФинанс» поздравляет вас с «Праздником Весны и Труда» и...
+                    </div>
+                    <div style="display: none;" class="c8">
+                        <p>Дорогие клиенты, ООО КБ «РостФинанс» поздравляет вас с «Праздником Весны и Труда» и «Днем Победы»!</p>
+                        <p>И информирует об установлении следующего режима работы офисов банка</p>
+                        <p>График работы контакт-центра банка:</p>
+                        <p><span class="bold">27.04.2024</span> — с 08:30 до 20:00</p>
+                        <p><span class="bold">28.04.2024 – 30.04.2024</span> — с 10:00 до 16:00</p>
+                        <p><span class="bold">01.05.2024</span> — с 08:30 до 17:30</p>
+                        <p><span class="bold">02.05.2024 – 03.05.2024</span> — с 08:30 до 20:00</p>
+                        <p><span class="bold">04.05.2024 – 05.05.2024</span> — с 10:00 до 16:00</p>
+                        <p><span class="bold">06.05.2024 – 07.05.2024</span> — с 08:30 до 20:00</p>
+                        <p><span class="bold">08.05.2024</span> — с 08:30 до 19:00</p>
+                        <p><span class="bold">09.05.2024</span> — с 08:30 до 17:30</p>
+                        <p><span class="bold">10.05.2024</span> — с 10:00 до 16:00</p>
+                        <p><span class="bold">11.05.2024 – 12.05.2024</span> — с 10:00 до 16:00</p>
+                    </div>
+                    <div style="display: block;" class="c8" id="but">
+                        <button class="butNew" onclick="showNew(8)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c8" id="but">
+                        <button class="butNew" onclick="hideNew(8)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">15.04.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/izmenenie-usloviy-po-vkladam-s-16-04-2024/">
+                            ИЗМЕНЕНИЕ УСЛОВИЙ ПО ВКЛАДАМ С 16.04.2024
+                        </a>
+                    </h3>
+                    <div class="c9" id="display">
+                        Уважаемые клиенты! ООО КБ «РостФинанс» сообщает Вам информацию об изменений условий по вновь принимаемым вкладам «Умный Рост» и «Формула Роста»...
+                    </div>
+                    <div style="display: none;" class="c9">
+                        <p>
+                            Уважаемые клиенты! ООО КБ «РостФинанс» сообщает Вам информацию об изменений условий по вновь принимаемым вкладам «Умный Рост» и «Формула Роста» с 16.04.2024.
+                        </p>
+                        <p>
+                            Подробная информация на сайте Банка в разделах «Вклады и Счета» и «Особые вклады», а также в офисах Банка и по телефону 8 800 777 70 01.
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c9" id="but">
+                        <button class="butNew" onclick="showNew(9)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c9" id="but">
+                        <button class="butNew" onclick="hideNew(9)">Скрыть</button>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="date">13.03.2024</div>
+                    <h3 class="title">
+                        <a href="https://www.rostfinance.ru/news/izmenenie-protsentnykh-stavok-po-vkladam-s-14-03-2024/">
+                            ИЗМЕНЕНИЕ ПРОЦЕНТНЫХ СТАВОК ПО ВКЛАДАМ С 14.03.2024
+                        </a>
+                    </h3>
+                    <div class="c10" id="display">
+                        Уважаемые клиенты! ООО КБ «РостФинанс» сообщает Вам информацию об изменении процентных ставок...
+                    </div>
+                    <div style="display: none;" class="c10">
+                        <p>
+                            Уважаемые клиенты! ООО КБ «РостФинанс» сообщает Вам информацию об изменении процентных ставок по вновь принимаемым вкладам «45 дней Роста +», «Уверенный Рост», «Классический рост», «Умный Рост» и «Формула Роста» с 14.03.2024.
+                        </p>
+                        <p>
+                            Подробная информация на сайте Банка в разделах «Вклады и Счета» и «Особые вклады», а также в офисах Банка и по телефону 8 800 777 70 01  
+                        </p>
+                    </div>
+                    <div style="display: block;" class="c10" id="but">
+                        <button class="butNew" onclick="showNew(10)">Подробнее</button>
+                    </div>
+                    <div style="display: none;" class="c10" id="but">
+                        <button class="butNew" onclick="hideNew(10)">Скрыть</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="title_search">
+                <form action="/search/index.php" class="search-title-flex">
+                    <img alt="Контактная информация" src="logo.png" srcset="logo.png 2x, logo.png 3x" class="footer__logo-img">
+                    <label data-valid="" class="bg-dark line-box-in">
+                        <i class="icon-tuiIconSearch first-icons"></i>
+                        <input name="q" tabindex="" placeholder="" type="text">
+                        <i title="Я ищу">Я ищу</i> <i class="icon-tuiIconClose last-icons"></i>
+                        <div class="mess-err"></div> 
+                    </label>
+                    <button type="submit" name="s" value="Поиск" class="btn_foot">Поиск</button>
+                </form>
+            </div>       
+        </footer>
+    </body>
+</html>

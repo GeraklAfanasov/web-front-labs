@@ -1,0 +1,195 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    overflow-x: hidden;
+}
+header {
+    background-color: rgb(221, 215, 215);
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    margin: -10px;
+    padding: 10px;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    padding-left: 190px;
+    padding-right: 30px;
+    position: relative;
+    height: 60px;
+    margin-bottom: 40px;
+}
+/* Стили для контейнера внутри header */
+header .container {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    align-items: center; /* Выравнивание по вертикали */
+    list-style-type: none; /* Удаляем маркеры списка */
+    padding: 0; /* Убираем отступы у списка */
+    margin-left: 10px;
+    font-size: 12pt;
+}
+
+/* Стили для элементов навигации внутри header */
+header .container .header-menu-items a {
+    color: #121212; /* Цвет текста */
+    text-decoration: none; /* Удаление подчеркивания */
+    margin-left: 40px; /* Отступ справа */
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+header .container .header-menu-items a:hover {
+    color: #007BFF; /* Цвет при наведении */
+}
+
+/* Стили для логотипа внутри header */
+header .header__logo img {
+    height: 50px; /* Высота логотипа */
+}
+
+/* Стили для кнопки онлайн-банка внутри header */
+header .wide-menu-flex .online-bank {
+    border: 2px solid  #00c09f;
+    background-color: rgb(221, 215, 215);
+    color: #00c09f; /* Цвет текста */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 15px; /* Скругление углов */
+    text-decoration: none; /* Удаление подчеркивания */
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+}
+
+header .wide-menu-flex .online-bank:hover {
+    background-color: #00c09f; /* Цвет при наведении */
+    color: #fff;
+}
+
+/* Дополнительные стили для классов, если они есть */
+.fsize-c1 {
+    font-size: 1em; /* Размер шрифта */
+}
+.txt-color-gray-900 {
+    color: #1a202c; /* Цвет текста */
+}
+
+main {
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+}
+
+footer {
+    background-color: #262626;
+    color: #ffff    ;
+    font-family: Arial;
+    padding: 10px 20px;
+    font-size: 12pt;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}   
+
+footer .footer__logo-img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.btn_foot {
+    cursor: pointer;
+    border: none;
+    padding: 13px 24px;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+    background-color: #00c09f;
+    margin-left: 10px;
+}
+.btn_foot:hover {
+    background-color: #0d937d;
+}
+
+footer .search-title-flex {
+    display: flex;
+    margin-left: 200px;
+    padding: 10px;
+}
+
+footer .search-title-flex label {
+    display: flex;
+    align-items: center;
+    background-color: #262626;
+    border-radius: 10px;
+    border: 2px solid #737272;
+    padding: 5px 10px;
+    color: #a0a0a0;
+    margin-left: 500px;
+}
+
+footer .search-title-flex label:hover {
+    border: 2px solid #ebeaea;
+    color: #ffffff;
+}
+
+footer .search-title-flex label i {
+    margin-right: 5px;
+}
+
+footer .search-title-flex label input {
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+    padding: 5px;
+}
+
+a {
+    color: #1b1b1b;
+    text-decoration: underline;
+}
+a:hover {
+    color: #00c09f;
+    box-shadow: gray;
+    text-decoration: underline;
+}
+.menu {
+    position: fixed;
+    text-decoration: none;
+    left: 0;
+    top: 0;
+    color: #1b1b1b;
+    height: 100%;
+    width: 110px;
+    background-color: #b8b2b2;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    z-index: 10;
+}
+.menu h3:hover {
+    transform: scale(1.03);
+    color: #4a4a4a;
+}
+.menu h3 {
+    text-align: center;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #1b1b1b;
+}
+.menu li a:hover {
+    text-decoration: underline;
+    transform: scale(1.03);
+    color: #087160;
+    border-radius: 10px;
+}

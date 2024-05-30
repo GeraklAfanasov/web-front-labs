@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>РостФинанс Банк</title>
+        <link rel="stylesheet" href="mainRGZ.css">
+        <link rel="icon" href="rost.ico">
+
+        <style>
+            footer {
+                position: absolute;
+            }
+            .currency-calculator {
+                max-width: 430px;
+                margin: 0 auto;
+                background-color: #f2f4f7;
+                padding: 20px;
+                padding-top: 2px;
+                border-radius: 8px;
+                box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.1);
+                color: black;
+                font-size: 20px;
+                line-height: 1.5;
+            }
+
+            .currency-calculator h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            .currency-calculator label {
+                display: block;
+                margin-bottom: 10px;
+                color: #666;
+            }
+
+            .currency-calculator input[type="number"] {
+                width: 95%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            .currency-calculator button {
+                width: 100%;
+                cursor: pointer;
+                font-size: 14px;
+                text-align: center;
+                border: 2px solid  #00c09f;
+                background-color: #f2f4f7;
+                color: #00c09f; /* Цвет текста */
+                padding: 10px 10px; /* Внутренние отступы */
+                border-radius: 15px; /* Скругление углов */
+                text-decoration: none; /* Удаление подчеркивания */
+                transition: background-color 0.3s ease; /* Плавное изменение фона */
+            }
+
+            .currency-calculator button:hover {
+                background-color: #00c09f; /* Цвет при наведении */
+                color: #fff;
+                transform:scale(1.05) ;
+            }
+
+            .currency-calculator .result {
+                margin-top: 20px;
+                text-align: center;
+                color: #333;
+            }
+            .course-valute {
+                margin-bottom: 20px;
+                padding: 10px;
+                background-color: #e9ecef;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+                font-size: 16px;
+                color: #495057;
+            }
+            .course-valute a{
+                text-decoration: underline;
+                color: #333;
+            }
+            .course-valute a:hover{
+                background-color: #ddd;
+            }
+        </style>
+
+        <script>
+            // Функция для получения актуального курса валюты
+            function getExchangeRate() {
+                return fetch('https://www.cbr-xml-daily.ru/daily_json.js')
+                    .then(response => response.json())
+                    .then(data => data.Valute.EGP.Value)
+                    .catch(error => console.error('Ошибка при получении курса валют:', error));
+            }
+
+            // Функция для расчета и отображения результата
+            async function calculateCurrency() {
+                const rublesInput = document.getElementById('rubles');
+                const thbInput = document.getElementById('egp');
+                const resultDiv = document.getElementById('result');
+
+                const exchangeRate = await getExchangeRate();
+                if (rublesInput.value && thbInput.value) {
+                    resultDiv.textContent = 'Введите значения одной валюты для расчётов';
+                } else if (rublesInput.value < 0 || thbInput.value < 0) {
+                    resultDiv.textContent = 'Сумма валюты не может быть отрицательной!';
+                } else if (rublesInput.value) {
+                    const thbValue = ((rublesInput.value / exchangeRate) * 10).toFixed(2);
+                    resultDiv.textContent = `${rublesInput.value} рублей = ${thbValue} египетских фунтов`;
+                } else if (thbInput.value) {
+                    const rublesValue = ((thbInput.value * exchangeRate) / 10).toFixed(2);
+                    resultDiv.textContent = `${thbInput.value} египетских фунтов = ${rublesValue} рублей`;
+                } else {
+                    resultDiv.textContent = 'Введите количество рублей или египетских фунтов';
+                }
+            }
+
+            // Функция для отображения актуального курса валюты
+            async function displayExchangeRate() {
+                const exchangeRate = await getExchangeRate();
+                const exchangeRateElement = document.getElementById('exchange-rate');
+                
+                // Делим на 10, чтобы получить курс 1 единицы валюты
+                const unitExchangeRate = (exchangeRate / 10).toFixed(2);
+                exchangeRateElement.textContent = `Текущий курс: 1 египетский фунт = ${unitExchangeRate} рублей`;
+            }
+
+            // Вызываем функцию для отображения курса валюты при загрузке страницы
+            window.onload = displayExchangeRate;
+        </script>
+    </head>
+
+    <body>
+        <header> 
+            <div class="container">
+                <div class="header__logo">
+                    <img alt="Контактная информация" src="logo.webp" srcset="logo.webp 2x, logo.webp 3x" class="header__logo-img">
+                </div>
+
+                <div class="wide-menu-flex wide-menu-online">
+                    <a href="https://www.rostfinance.ru/internet-bank/" class="btn empty-border-green online-bank">Онлайн-банк</a>
+                </div>
+                <div class="header-menu-items">
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/blog/">Блог</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/about/">О банке</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/mobile-app/">Мобильное приложение</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/faq/">Вопросы и ответы</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/currency/">Курсы валют</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" href="https://www.rostfinance.ru/contacts/">Контакты</a>
+                    <a class="header-top-nav-element fsize-c1 txt-color-gray-900" rel="modal:open" href="https://www.rostfinance.ru/#help_form">Помощь</a>
+                </div> 
+            </div>
+        </header>
+
+        <main>
+            <div class="menu">
+                <h3>Меню</h3>
+                <ul>
+                    <li><a href="company.html">О компании</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="calculator.html">Курс валют</a></li>
+                    <li><a href="contacts.html">Контактные данные</a></li>
+                    <li><a href="video.html">Видео</a></li>
+                </ul>
+            </div>
+
+            <div class="currency-calculator">
+                <h2>Конвертор валют</h2>
+                <div class="course-valute">
+                    <div id="exchange-rate"></div>
+                    <div><a href="https://www.cbr-xml-daily.ru/">Источник данных курса валют</a></div>
+                </div>
+                <label for="rubles">Введите сумму в рублях:</label>
+                <input type="number" id="rubles" min="0" placeholder="Сумма в рублях">
+                <label for="egp">Введите сумму в египетских фунтах:</label>
+                <input type="number" id="egp" min="0" placeholder="Сумма в египетских фунтах">
+                <button onclick="calculateCurrency()">Перевести</button>
+                <div class="result" id="result"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="title_search">
+                <form action="/search/index.php" class="search-title-flex">
+                    <img alt="Контактная информация" src="logo.png" srcset="logo.png 2x, logo.png 3x" class="footer__logo-img">
+                    <label data-valid="" class="bg-dark line-box-in">
+                        <i class="icon-tuiIconSearch first-icons"></i>
+                        <input name="q" tabindex="" placeholder="" type="text">
+                        <i title="Я ищу">Я ищу</i> <i class="icon-tuiIconClose last-icons"></i>
+                        <div class="mess-err"></div> 
+                    </label>
+                    <button type="submit" name="s" value="Поиск" class="btn_foot">Поиск</button>
+                </form>
+            </div>       
+        </footer>
+    </body>
+</html>
